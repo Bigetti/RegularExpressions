@@ -7,7 +7,7 @@ def fio_change(contact_list):
     new_contact_list = []
     for contact in contact_list:
         # Используем модифицированное регулярное выражение для поиска ФИО
-        match = re.search(r'(\b\w+\b)(?:\s+(\b\w+\b)(?:\s+(\b\w+\b))?)?', contact[0])
+        match = re.search(r'(\b\w+\b)(?:\s+(\b\w+\b)(?:\s+(\b\w+\b))?)?', ' '.join(contact[:3]))
         
         if match:
             # Если найдено, извлекаем Фамилию, Имя и Отчество
